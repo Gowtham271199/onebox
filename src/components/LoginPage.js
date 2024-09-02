@@ -15,11 +15,11 @@ const LoginPage = () => {
   const handleSubmit = async () => {
     try {
       if (isRegistering) {
-        await axios.post('http://localhost:3001/api/register', { email, password });
+        await axios.post('https://rib-be-1.onrender.com/api/register', { email, password });
         setError('Registration successful, please log in.');
         setIsRegistering(false);
       } else {
-        const response = await axios.post('http://localhost:3001/api/login', { email, password });
+        const response = await axios.post('https://rib-be-1.onrender.com/api/login', { email, password });
         const token = response.data.token;
         localStorage.setItem('authToken', token);
         navigate('/google-login');

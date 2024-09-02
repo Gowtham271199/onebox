@@ -15,7 +15,7 @@ const ReplyBox = ({ threadId }) => {
     }
   
     try {
-      await axios.post(`http://localhost:3001/api/reply/${threadId}`, {
+      await axios.post(`https://rib-be-1.onrender.com/api/reply/${threadId}`, {
         from: 'your-email@example.com', // Replace with actual sender email
         to: 'recipient@example.com',    // Replace with actual recipient email
         subject: subject,
